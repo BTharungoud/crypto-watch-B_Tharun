@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crypto-watch-B_Tharun/static/css/main.2865d55d.css",
+    "main.js": "/crypto-watch-B_Tharun/static/js/main.abb13e66.js",
+    "index.html": "/crypto-watch-B_Tharun/index.html",
+    "main.2865d55d.css.map": "/crypto-watch-B_Tharun/static/css/main.2865d55d.css.map",
+    "main.abb13e66.js.map": "/crypto-watch-B_Tharun/static/js/main.abb13e66.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2865d55d.css",
+    "static/js/main.abb13e66.js"
+  ]
+}
