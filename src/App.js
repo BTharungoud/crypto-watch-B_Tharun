@@ -12,17 +12,17 @@ import LoginPage from './Pages/LoginPage';
 import Register from './Pages/Register';
 
 function App() {
-  
+
 
 
   //styling starts here
-  
+
   const CustomApp = styled('div')(({ theme }) => ({
     backgroundColor: "#031B34",
     color: "white",
     minHeight: "100vh",
   }))
-  
+
   //styling ends here
 
 
@@ -32,15 +32,13 @@ function App() {
     <BrowserRouter>
       <CustomApp>
         <Header />
-        
-        <Route exact path='/' component={Register}/>
-        <Route path='/login' component={LoginPage}/>
-        <Route path='/homepage' component={Homepage}/>
+        <Route exact path='/' component={LoginPage} />
+        <Route path='/register' component={Register} />
+        <Route path='/homepage' component={Homepage} />
+
+
         {/* your private and public routes goes here */}
-      
-         
-        
-       
+
       </CustomApp>
     </BrowserRouter>
   );

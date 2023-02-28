@@ -1,23 +1,28 @@
 import React, { useState } from 'react'
 import { useHistory, Link } from 'react-router-dom'
 import './auth.css'
-const LoginPage = (props) => {
-  console.log(props)
-  const [credentials, setCredentials] = useState({ email: '', password: ''})
- 
-  const history = useHistory()
-  const obj2={ email: '', password: ''}
-  const handleLogin = (e) => {
+const LoginPage = () => {
 
+  const [credentials, setCredentials] = useState({ email: '', password: '' })
+
+  const history = useHistory()
+
+  const handleLogin = (e) => {
     e.preventDefault();
-   // console.log(history);
-    
+    let ele1 = localStorage.getItem('email');
+    let ele2 = localStorage.getItem('password');
+    if (ele1 === credentials.email && ele2 === credentials.password) {
+      history.push('/homepage');
+    }
+    else {
+      alert("wrong credentials");
+    }
     // get the user data from the localStorage if matches take the user to Home page
 
   }
   const handleChange = (e) => {
     e.preventDefault();
-    setCredentials({...credentials ,[e.target.name]: e.target.value })
+    setCredentials({ ...credentials, [e.target.name]: e.target.value })
   }
 
   return (
@@ -33,7 +38,7 @@ const LoginPage = (props) => {
         <button type='submit'>Login</button>
         <div className="account">
           <span>Don't have an account?</span>
-          <Link to="/">Register</Link>
+          <Link to="/register">Register</Link>
         </div>
       </form>
     </div>

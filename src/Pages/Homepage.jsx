@@ -5,8 +5,8 @@ import CoinsTable from '../components/CoinsTable/CoinsTable'
 const Homepage = () => {
     return (
         <>
-            <Banner />
-            <CoinsTable />
+            <Banner/>
+            <CoinsTable/>
         </>
     )
 }

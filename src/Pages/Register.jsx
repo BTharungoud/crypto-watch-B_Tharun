@@ -2,23 +2,20 @@ import React, { useState } from 'react'
 import { useHistory, Link } from 'react-router-dom'
 import './auth.css'
 import LoginPage from './LoginPage'
+
 const Register = () => {
 
     const [credentials, setCredentials] = useState({ email: '', password: '', name: '', })
 
     const history = useHistory()
-    
-    const obj={ email: '', password: '', name: '', };
+
     const handleRegister = (e) => {
         e.preventDefault();
-       // console.log(e);
-        obj.email=e.target.email.value;
-        obj.password=e.target.password.value;
-        obj.name=e.target.name.value;
-      
-      history.push('/login');
-      history();
-       
+        localStorage.setItem('email',e.target.email.value)
+        localStorage.setItem('password',e.target.password.value)
+        history.push('/');
+        history();
+
         // set the user data to the localStorage
         
     }
@@ -45,13 +42,11 @@ const Register = () => {
                 <button type='submit'>Register</button>
                 <div className="account">
                     <span>Already have an account?</span>
-                    <Link to="/login">Login</Link>
+                    <Link to="/">Login</Link>
                 </div>
             </form>
-            </div>
-            <LoginPage data={obj.email}/>
+        </div>
         </>
-        
     )
 }
 
