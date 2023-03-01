@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/crypto-watch-B_Tharun/static/css/main.2865d55d.css",
-    "main.js": "/crypto-watch-B_Tharun/static/js/main.495caf49.js",
+    "main.js": "/crypto-watch-B_Tharun/static/js/main.81911cfa.js",
     "index.html": "/crypto-watch-B_Tharun/index.html",
     "main.2865d55d.css.map": "/crypto-watch-B_Tharun/static/css/main.2865d55d.css.map",
-    "main.495caf49.js.map": "/crypto-watch-B_Tharun/static/js/main.495caf49.js.map"
+    "main.81911cfa.js.map": "/crypto-watch-B_Tharun/static/js/main.81911cfa.js.map"
   },
   "entrypoints": [
     "static/css/main.2865d55d.css",
-    "static/js/main.495caf49.js"
+    "static/js/main.81911cfa.js"
   ]
 }
