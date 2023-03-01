@@ -17,16 +17,15 @@ const CoinPage = () => {
     const { currency, symbol } = CryptoState()
 
     const fetchSingleCoin = async () => {
-        
-        //fetch the coin data here
+        const { data } = await axios.get(SingleCoin(id));
+        setCoin(data);
     }
 
     useEffect(() => {
-        
-
+        fetchSingleCoin();
     }, []);
 
-    
+
 
     //styling starts here
 

@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header';
 // import ProtectedRoute from './components/ProtectedRoute';
 // import PublicRoute from './components/PublicRoute';
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute'; 
 import PublicRoute from './components/PublicRoute';
 import CoinPage from './Pages/CoinPage';
 import Homepage from './Pages/Homepage';
@@ -35,6 +35,7 @@ function App() {
         <Route exact path='/' component={LoginPage} />
         <Route path='/register' component={Register} />
         <Route path='/homepage' component={Homepage} />
+        <PrivateRoute path='/coins/:id' component={CoinPage} />
 
 
         {/* your private and public routes goes here */}

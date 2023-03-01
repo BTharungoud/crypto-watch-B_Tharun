@@ -36,19 +36,15 @@ const Carousel = () => {
     const { currency, symbol } = CryptoState();
 
     const fetchTrendingCoins = async () => {
-
-        //fetch trending coins here and set it inside trending state
-
+        const {data} =await axios.get(TrendingCoins(currency))
+        setTrending(data);
     }
-
-    useEffect(() => {
-
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-
-
-    }, [currency])
     
+    useEffect(() => {
+        fetchTrendingCoins();
+    }, [currency])
+
+
     const items = trending.map((coin) => {
         const coin_change = coin?.price_change_percentage_24h.toFixed(2);
         return (
@@ -75,10 +71,6 @@ const Carousel = () => {
             items: 4
         }
     }
-
-
-
-
     return (
         <StyledCarousel>
             <AliceCarousel mouseTracking infinite autoPlayInterval={1000} animationDuration={1500} disableButtonsControls disableDotsControls responsive={responsive} autoPlay items={items} />
